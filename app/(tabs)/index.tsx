@@ -63,9 +63,7 @@ const PizzaBeerCalculator = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Pizza and Beer Calculator for Fleet 18</Text>
-      <Text style={styles.description}>
-        Fleet 18 is a group of windsurfers who race on Foster City Lagoon on Tuesday Nights.\nAfter racing, we go to Waterfront Pizza for pizza and beer. Everyone has pizza but not everyone has beer. This app helps determine how much people owe.
-      </Text>
+      
       <Text
         style={styles.link}
         onPress={() => Linking.openURL('https://waterfrontpizza.com/')}
@@ -153,9 +151,12 @@ const PizzaBeerCalculator = () => {
         </View>
       )}
 
-      <Text>Created by: </Text>
+      <View style={styles.footerContainer}>
+        <Text>Created by: </Text>
         <Text style={styles.link} onPress={() => Linking.openURL('https://www.linkedin.com/in/wgreunke/')}>Ward Greunke</Text>
-      
+        <Text> - </Text>
+
+      </View>
     </ScrollView>
   );
 };
@@ -221,10 +222,11 @@ const styles = StyleSheet.create({
   bold: {
     fontWeight: 'bold',
   },
-  footer: {
-    marginTop: 20,
-    textAlign: 'center',
-    color: '#888',
+  footerContainer: {
+    marginBottom: 40,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 
