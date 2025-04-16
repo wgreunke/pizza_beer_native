@@ -62,7 +62,7 @@ const PizzaBeerCalculator = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Pizza and Beer Calculator for Fleet 18</Text>
+      <Text style={styles.title}>Pizza and Beer Calculator</Text>
       
       
 
@@ -113,7 +113,7 @@ const PizzaBeerCalculator = () => {
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Total Tax</Text>
+        <Text style={styles.sectionTitle}>Total Tax + Service Charges</Text>
         <TextInput
           keyboardType="numeric"
           value={tax}
@@ -129,9 +129,11 @@ const PizzaBeerCalculator = () => {
       {results && (
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Final Numbers With Tax:</Text>
-          <Text>Per Person for people who just ate pizza w/tax: ${results.pizzaPerPerson}</Text>
-          <Text>Per Person for people who just drank beer w/tax: ${results.beerPerPerson}</Text>
-          <Text>Per Person for people who ate pizza and drank beer w/tax: ${results.pizzaAndBeerPerPerson}</Text>
+          <Text>If you only ate pizza, you owe: ${results.pizzaPerPerson}</Text>
+          <Text>If you only drank beer you owe: ${results.beerPerPerson}</Text>
+          <Text>If you ate pizza and drank beer, you owe: ${results.pizzaAndBeerPerPerson}</Text>
+          <Text> </Text>
+          <Text>Each person should tip accordingly.</Text>
           <Text style={styles.validateTitle}>Check the math:</Text>
           {/*<Text>Pizza Tax: ${results.pizzaTax}</Text>
           <Text>Beer Tax: ${results.beerTax}</Text>*/}
