@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Linking, Image } from "react-native";
 export default function About() {
   return (
     <View>
+      <Text style={styles.title}>About</Text>
       <Image source={require('../../assets/images/GlenTaylor.jpg')} style={styles.image} />
       <Text style={styles.description}>
         Fleet 18 is a group of windsurfers who race on Foster City Lagoon on Tuesday Nights. After racing, we go to Waterfront Pizza for pizza and beer.
@@ -32,6 +33,11 @@ const styles = StyleSheet.create({
     color: 'blue',
     textDecorationLine: 'underline',
     marginBottom: 20,
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
     textAlign: 'center',
   },
 });
