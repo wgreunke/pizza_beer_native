@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, Linking, Button } from 'react-native';
+import { View, Text, Image, StyleSheet, Linking, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const HomeScreen = () => {
   return (
@@ -17,10 +18,13 @@ const HomeScreen = () => {
         Quickly split the tab when everyone's having pizza and beer, but not everyone is having beer.
       </Text>
       <Text>  </Text>
-      <Button
-        title="What's the Damage?"
+      <TouchableOpacity 
+        style={styles.roundButton}
         onPress={() => router.replace('/(tabs)/App')}
-      />
+      >
+        <Text style={styles.buttonText}>What's the Damage?</Text>
+      </TouchableOpacity>
+      <Text>  </Text>
       <Text>
         Created by: <Text style={styles.link} onPress={() => Linking.openURL('https://www.linkedin.com/in/wgreunke/')}>Ward Greunke</Text>
       </Text>
@@ -41,6 +45,9 @@ const styles = StyleSheet.create({
     height: 300,
     marginBottom: 20,
   },
+  icon: {
+    marginBottom: 20,
+  },
   boldText: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -50,6 +57,23 @@ const styles = StyleSheet.create({
   link: {
     color: 'blue',
     textDecorationLine: 'underline',
+  },
+  roundButton: {
+    backgroundColor: '#007AFF',
+    borderRadius: 25,
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 

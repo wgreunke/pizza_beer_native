@@ -14,12 +14,16 @@ export default function About() {
         {' '}for pizza and beer.
       </Text>
       <Text>
-        Everyone has pizza but not everyone has beer. This app helps determine how much people owe.
+        Everyone has pizza but not everyone has beer. This app was written to determine how much we owe.
       </Text>
       
       <Text> </Text> 
       <Text>Created by: </Text>
       <Text style={styles.link} onPress={() => Linking.openURL('https://www.linkedin.com/in/wgreunke/')}>Ward Greunke</Text>
+      <Text> </Text>
+      <Text style={styles.link} onPress={() => Linking.openURL('https://docs.google.com/forms/d/e/1FAIpQLSewyWPHyVb1KqdfAQaalfu5lmSD1q-xpRgJu0TtxUh5C4EzhA/viewform?usp=header')}>Comments / Suggestions </Text>
+      
+
     </View>
   )
 }
