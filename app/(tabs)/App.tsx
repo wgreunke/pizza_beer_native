@@ -69,7 +69,7 @@ const PizzaBeerCalculator = () => {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Pizza</Text>
         <View style={styles.inputGroup}>
-          <Text>Pizza amount without tax</Text>
+          <Text>Pizza amount without tax:</Text>
           <TextInput
             keyboardType="numeric"
             value={pizzaPreTax}
@@ -78,7 +78,7 @@ const PizzaBeerCalculator = () => {
           />
         </View>
         <View style={styles.inputGroup}>
-          <Text>Number of people who ate pizza</Text>
+          <Text>Number of people who ate pizza:</Text>
           <TextInput
             keyboardType="numeric"
             value={pizzaNum}
@@ -92,7 +92,7 @@ const PizzaBeerCalculator = () => {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Beer</Text>
         <View style={styles.inputGroup}>
-          <Text>Beer amount without tax</Text>
+          <Text>Beer amount without tax:</Text>
           <TextInput
             keyboardType="numeric"
             value={beerPreTax}
@@ -101,7 +101,7 @@ const PizzaBeerCalculator = () => {
           />
         </View>
         <View style={styles.inputGroup}>
-          <Text>Number of people who drank beer</Text>
+          <Text>Number of people who drank beer:</Text>
           <TextInput
             keyboardType="numeric"
             value={beerNum}
@@ -131,7 +131,9 @@ const PizzaBeerCalculator = () => {
           <Text style={styles.sectionTitle}>Final Numbers With Tax:</Text>
           <Text>If you only ate pizza, you owe: ${results.pizzaPerPerson}</Text>
           <Text>If you only drank beer you owe: ${results.beerPerPerson}</Text>
-          <Text>If you ate pizza and drank beer, you owe: ${results.pizzaAndBeerPerPerson}</Text>
+          {parseInt(pizzaNum) > 0 && parseInt(beerNum) > 0 && (
+            <Text>If you ate pizza and drank beer, you owe: ${results.pizzaAndBeerPerPerson}</Text>
+          )}
           <Text> </Text>
           <Text>Each person should tip accordingly.</Text>
           <Text style={styles.validateTitle}>Check the math:</Text>
