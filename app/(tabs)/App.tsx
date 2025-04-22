@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, ScrollView, StyleSheet, Linking } from 'react-native';
+import { View, Text, TextInput, ScrollView, StyleSheet, Linking, TouchableOpacity } from 'react-native';
 
 const PizzaBeerCalculator = () => {
   const [pizzaPreTax, setPizzaPreTax] = useState('');
@@ -62,7 +62,8 @@ const PizzaBeerCalculator = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Pizza and Beer Calculator</Text>
+      <Text> </Text>
+      <Text style={styles.title}>Pizza and Beer Bill Splitter</Text>
       
       
 
@@ -123,7 +124,12 @@ const PizzaBeerCalculator = () => {
       </View>
 
       <View style={styles.buttonContainer}>
-        <Button title="Add it Up!" onPress={calculateBill} color="#007bff" />
+        <TouchableOpacity 
+          style={styles.roundButton}
+          onPress={calculateBill}
+        >
+          <Text style={styles.buttonText}>Add it Up!</Text>
+        </TouchableOpacity>
       </View>
 
       {results && (
@@ -149,7 +155,6 @@ const PizzaBeerCalculator = () => {
         <Text>Created by: {' '}
         <Text style={styles.link} onPress={() => Linking.openURL('https://www.linkedin.com/in/wgreunke/')}>Ward Greunke</Text>
         </Text>
-
       </View>
     </ScrollView>
   );
@@ -215,9 +220,9 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: 'bold',
-  },
+  }, 
   footerContainer: {
-    marginBottom: 40,
+    marginBottom: 80,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -231,6 +236,21 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginTop: 5,
   },
+  roundButton: {
+    backgroundColor: '#007AFF',
+    borderRadius: 25,
+    paddingVertical: 12,
+    paddingHorizontal: 25,
+    elevation: 3,
+    boxShadow: '0px 2px 3.84px rgba(0, 0, 0, 0.25)',
+    alignSelf: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
 });
-
+ 
 export default PizzaBeerCalculator;

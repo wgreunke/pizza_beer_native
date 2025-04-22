@@ -25,9 +25,8 @@ const HomeScreen = () => {
         <Text style={styles.buttonText}>What's the Damage?</Text>
       </TouchableOpacity>
       <Text>  </Text>
-      <Text>
-        Created by: <Text style={styles.link} onPress={() => Linking.openURL('https://www.linkedin.com/in/wgreunke/')}>Ward Greunke</Text>
-      </Text>
+      <Text>  </Text>
+
     </View>
   );
 };
@@ -41,8 +40,8 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   image: {
-    width: '100%',
-    height: 300,
+    width: '80%',
+    height: 250,
     marginBottom: 20,
   },
   icon: {
