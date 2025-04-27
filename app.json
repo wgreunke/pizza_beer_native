@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "pizza_beer_native",
-    "slug": "pizza_beer_native",
+    "name": "Pizza & Beer Bill Splitter",
+    "slug": "pizza_beer_bill_splitter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "pizza-beer-bill-splitter",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
