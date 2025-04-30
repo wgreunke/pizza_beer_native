@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Pizza & Beer Bill Splitter",
-    "slug": "pizza_beer_bill_splitter",
-    "version": "1.0.1",
+    "name": "Pizza & Beer Bill Splitter Icon",
+    "slug": "pizza_beer_bill_splitter_icon",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "pizza-beer-bill-splitter",
@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "pizza.beer.splitter",
+      "bundleIdentifier": "pizza.beer.splitter.icon",
       "icon": "./assets/images/icon.png",
       "splash": {
         "image": "./assets/images/splash-icon.png",
