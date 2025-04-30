@@ -15,7 +15,7 @@ const HomeScreen = () => {
         Stop paying for other people's beer!
       </Text>
       <Text>
-        Quickly split the tab when everyone's having pizza and beer, but not everyone is having beer.
+        Quickly split the tab when going out for pizza and beer but not everyone is drinking beer.
       </Text>
       <Text>  </Text>
       <TouchableOpacity 
